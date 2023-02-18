@@ -26,10 +26,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Smc-vr-m0o">
-                                <rect key="frame" x="30" y="527" width="333" height="261"/>
+                                <rect key="frame" x="30" y="481" width="333" height="307"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="j9j-w6-f28">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1S-au-h53" userLabel="errorMsg">
                                         <rect key="frame" x="0.0" y="0.0" width="333" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="j9j-w6-f28">
+                                        <rect key="frame" x="0.0" y="46" width="333" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🇺🇸 Enter USD: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Cl-oo-KQu">
                                                 <rect key="frame" x="0.0" y="0.0" width="145.66666666666666" height="31"/>
@@ -45,7 +51,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="pCr-zr-ZKc">
-                                        <rect key="frame" x="0.0" y="46" width="333" height="31"/>
+                                        <rect key="frame" x="0.0" y="92" width="333" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🇪🇺 Euro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8W-eA-Naw">
                                                 <rect key="frame" x="0.0" y="0.0" width="145.66666666666666" height="31"/>
@@ -55,11 +61,14 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FXu-hD-Tuj">
                                                 <rect key="frame" x="187.66666666666663" y="0.0" width="147.33333333333337" height="31"/>
+                                                <connections>
+                                                    <action selector="euroSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="CfJ-Ua-FJf"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="cGu-cz-Iri">
-                                        <rect key="frame" x="0.0" y="92" width="333" height="31"/>
+                                        <rect key="frame" x="0.0" y="138" width="333" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🇧🇷 Real" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehR-G5-0BJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="145.66666666666666" height="31"/>
@@ -69,11 +78,14 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iuj-XK-8xY">
                                                 <rect key="frame" x="187.66666666666663" y="0.0" width="147.33333333333337" height="31"/>
+                                                <connections>
+                                                    <action selector="realSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="eS0-9H-hlo"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="ieE-QI-Fyz">
-                                        <rect key="frame" x="0.0" y="138" width="333" height="31"/>
+                                        <rect key="frame" x="0.0" y="184" width="333" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🇹🇭Baht" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ia-Dd-bAI">
                                                 <rect key="frame" x="0.0" y="0.0" width="145.66666666666666" height="31"/>
@@ -83,11 +95,14 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kIR-hQ-kbk">
                                                 <rect key="frame" x="187.66666666666663" y="0.0" width="147.33333333333337" height="31"/>
+                                                <connections>
+                                                    <action selector="bahtSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="HfJ-zx-OeT"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="7dy-NC-7Y3">
-                                        <rect key="frame" x="0.0" y="184" width="333" height="31"/>
+                                        <rect key="frame" x="0.0" y="230" width="333" height="31"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🇨🇳 Yuan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oL2-3s-luN">
                                                 <rect key="frame" x="0.0" y="0.0" width="145.66666666666666" height="31"/>
@@ -97,11 +112,14 @@
                                             </label>
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l9j-t8-KsH">
                                                 <rect key="frame" x="187.66666666666663" y="0.0" width="147.33333333333337" height="31"/>
+                                                <connections>
+                                                    <action selector="yuanSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="ess-OH-GwG"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FNh-95-rqE">
-                                        <rect key="frame" x="0.0" y="230" width="333" height="31"/>
+                                        <rect key="frame" x="0.0" y="276" width="333" height="31"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Convert">
                                             <backgroundConfiguration key="background">
@@ -110,6 +128,9 @@
                                             <fontDescription key="titleFontDescription" type="boldSystem" pointSize="24"/>
                                             <color key="baseForegroundColor" systemColor="labelColor"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="doConversion:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6SX-4K-dbj"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.91410196613296546" green="0.9799052380537685" blue="1" alpha="0.62585034013537411" colorSpace="custom" customColorSpace="sRGB"/>
@@ -130,6 +151,8 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="errorMsg" destination="s1S-au-h53" id="FXQ-Hk-5vN"/>
+                        <outlet property="usdInput" destination="wwG-ff-8qq" id="nkO-JI-FRD"/>
                         <segue destination="acB-DV-IZB" kind="presentation" identifier="convertUSD" id="7UN-LU-y4a"/>
                     </connections>
                 </viewController>

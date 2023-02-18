@@ -39,7 +39,8 @@ struct ConverterLogic {
     }
     
     mutating func getRequestedConversions() -> Dictionary<String, Double> {
-        var converted = [ "euro": euroBool ? getEuroValue() : -1.0,
+        var converted = [ "usd" : Double(usd),
+                          "euro": euroBool ? getEuroValue() : -1.0,
                           "real": realBool ? getRealValue() : -1.0,
                           "baht": bahtBool ? getBahtValue() : -1.0,
                           "yuan": yuanBool ? getYuanValue() : -1.0
