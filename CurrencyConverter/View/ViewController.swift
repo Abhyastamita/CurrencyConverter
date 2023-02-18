@@ -8,6 +8,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var converterLogic = ConverterLogic()
 
     override func viewDidLoad() {
         super.viewDidLoad()
