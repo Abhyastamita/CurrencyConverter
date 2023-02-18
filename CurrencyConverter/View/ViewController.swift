@@ -25,26 +25,27 @@ class ViewController: UIViewController {
     }
 
     @IBAction func euroSwitch(_ sender: UISwitch) {
-        converterLogic.setSwitch(sender.isOn, &converterLogic.euroBool)
+        converterLogic.setEuro(sender.isOn)
     }
     
     @IBAction func realSwitch(_ sender: UISwitch) {
-        converterLogic.setSwitch(sender.isOn, &converterLogic.realBool)
+        converterLogic.setReal(sender.isOn)
     }
     
     
     @IBAction func bahtSwitch(_ sender: UISwitch) {
-        converterLogic.setSwitch(sender.isOn, &converterLogic.bahtBool)
+        converterLogic.setBaht(sender.isOn)
     }
     @IBAction func yuanSwitch(_ sender: UISwitch) {
-        converterLogic.setSwitch(sender.isOn, &converterLogic.yuanBool)
+        converterLogic.setYuan(sender.isOn)
     }
     
     @IBAction func doConversion(_ sender: UIButton) {
         errorMsg.text = "" // Reset error message
         do {
-            let usd = try
-            isValid()
+            let usd = try isValid()
+            converterLogic.setUsd(usd)
+            print(converterLogic.getRequestedConversions())
         } catch {
             errorMsg.text = "Please enter a positive integer to convert."
         }

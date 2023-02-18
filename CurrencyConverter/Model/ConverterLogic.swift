@@ -14,12 +14,24 @@ struct ConverterLogic {
     var bahtBool : Bool = true
     var yuanBool : Bool = true
     
-    mutating func setSwitch(_ switchValue : Bool, _ currency : inout Bool) {
-        if switchValue {
-            currency = true
-        } else {
-            currency = false
-        }
+    mutating func setEuro(_ switchValue : Bool) {
+        euroBool = switchValue
+    }
+    
+    mutating func setReal(_ switchValue : Bool) {
+        realBool = switchValue
+    }
+    
+    mutating func setBaht(_ switchValue : Bool) {
+        bahtBool = switchValue
+    }
+    
+    mutating func setYuan(_ switchValue : Bool) {
+        yuanBool = switchValue
+    }
+    
+    mutating func setUsd(_ usdInput : Int) {
+        usd = usdInput
     }
     
     mutating func getEuroValue() -> Double {
@@ -39,7 +51,7 @@ struct ConverterLogic {
     }
     
     mutating func getRequestedConversions() -> Dictionary<String, Double> {
-        var converted = [ "usd" : Double(usd),
+        let converted = [ "usd" : Double(usd),
                           "euro": euroBool ? getEuroValue() : -1.0,
                           "real": realBool ? getRealValue() : -1.0,
                           "baht": bahtBool ? getBahtValue() : -1.0,
