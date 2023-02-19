@@ -10,6 +10,7 @@ import UIKit
 class ViewController: UIViewController {
     
     var converterLogic = ConverterLogic()
+    var values : Dictionary<String, Double> = [:]
 
     @IBOutlet weak var usdInput: UITextField!
     
@@ -45,11 +46,21 @@ class ViewController: UIViewController {
         do {
             let usd = try isValid()
             converterLogic.setUsd(usd)
-            print(converterLogic.getRequestedConversions())
+            values = converterLogic.getRequestedConversions()
+            self.performSegue(withIdentifier: "convertUSD", sender: self)
         } catch {
             errorMsg.text = "Please enter a positive integer to convert."
         }
         
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destination.
+        // Pass the selected object to the new view controller.
+        if segue.identifier == "convertUSD" {
+            let navigation = segue.destination as! ConvertedView
+            navigation.values = values
+        }
     }
     
     func isValid() throws -> Int {

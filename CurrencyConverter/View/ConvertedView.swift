@@ -8,14 +8,51 @@
 import UIKit
 
 class ConvertedView: UIViewController {
+    
+    var values : Dictionary<String, Double> = [:]
 
+    @IBOutlet weak var usd: UILabel!
+    
+    @IBOutlet weak var euro: UILabel!
+    
+    @IBOutlet weak var real: UILabel!
+    
+    @IBOutlet weak var baht: UILabel!
+    
+    @IBOutlet weak var yuan: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        let labels = [ "usd" : usd,
+                       "euro": euro,
+                       "real": real,
+                       "baht": baht,
+                       "yuan": yuan]
+        let currencySymbols = ["usd": "$",
+                               "euro": "€",
+                               "real": "R$",
+                               "baht": "฿",
+                               "yuan": "¥"
+        ]
+        
+        for (key, value) in values {
+            if (value > -1) {
+                labels[key]!!.isHidden = false
+                labels[key]!!.text = String(format: "\(currencySymbols[key]!)%.02f", value)
+            } else {
+                labels[key]!!.isHidden = true
+                
+            }
+        }
     }
     
-
+    @IBAction func backButtonPressed(_ sender: UIButton) {
+        dismiss(animated: true)
+    }
+    
     /*
     // MARK: - Navigation
 

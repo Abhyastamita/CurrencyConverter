@@ -263,6 +263,9 @@
                                                 <rect key="frame" x="0.0" y="328.99999999999994" width="333" height="57.333333333333314"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" title="Go Back"/>
+                                                <connections>
+                                                    <action selector="backButtonPressed:" destination="acB-DV-IZB" eventType="touchUpInside" id="jFA-Ao-cqy"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -281,6 +284,13 @@
                             <constraint firstItem="8dW-rp-beM" firstAttribute="top" secondItem="pWd-V8-bcg" secondAttribute="top" constant="30" id="tnr-p9-cAO"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="baht" destination="UMi-58-eu0" id="0im-be-Owd"/>
+                        <outlet property="euro" destination="uTR-bN-xtp" id="16r-EQ-Fzm"/>
+                        <outlet property="real" destination="QkN-Gz-jAi" id="5Ho-te-4YH"/>
+                        <outlet property="usd" destination="PJu-Ou-max" id="9xj-cI-jRF"/>
+                        <outlet property="yuan" destination="uHc-W1-fiI" id="7Hh-N9-hvz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="etI-bR-RB7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
