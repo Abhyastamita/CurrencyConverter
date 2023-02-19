@@ -31,11 +31,11 @@ class ConvertedView: UIViewController {
                        "real": real,
                        "baht": baht,
                        "yuan": yuan]
-        let currencySymbols = ["usd": "$",
-                               "euro": "€",
-                               "real": "R$",
-                               "baht": "฿",
-                               "yuan": "¥"
+        let currencySymbols = ["usd": "🇺🇸 Amount in USD: $",
+                               "euro": "🇪🇺 Euro: €",
+                               "real": "🇧🇷 Real: R$",
+                               "baht": "🇹🇭 Baht: ฿",
+                               "yuan": "🇨🇳 Yuan: ¥"
         ]
         
         for (key, value) in values {
